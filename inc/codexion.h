@@ -2,6 +2,9 @@
 # define CODEXION_H
 
 #include <stdio.h>
+#include <limits.h>
+#include <string.h>
+
 
 typedef enum scheduler_ops
 {
@@ -26,7 +29,14 @@ typedef struct args     t_args;
 
 
 /* parser  */
-int parser(int argc, char **argv, t_args args);
+int parser(int argc, char **argv, t_args *args);
+int is_digit(char **argv);
+
+
+/* utils  */
+long long	long_atoi(const char *str);
+
+
 
 
 #endif
